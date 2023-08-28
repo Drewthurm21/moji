@@ -7,10 +7,7 @@ import { api } from "~/utils/api";
 
 export default function Home() {
   const user = useUser()
-
-  useEffect(() => {
-
-  }, [user.isSignedIn])
+  const { data } =  api.posts.getAll.useQuery()
 
   return (
     <>
