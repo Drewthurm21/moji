@@ -19,6 +19,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         {!user.isSignedIn && <SignInButton />}
         {!!user.isSignedIn && <SignOutButton />}
+        {data?.map(post => <div key={post.id}>{post.content}</div>)}
       </main>
     </>
   );
